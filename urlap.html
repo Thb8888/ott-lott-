@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bejelentkezés</title>
+</head>
+<body style="font-family: Arial; max-width: 500px;
+             margin: 60px auto; padding: 20px;">
+
+  <h1>Bejelentkezés</h1>
+
+  <p>Adjon meg felhasználónevet meg jelszót</p>
+
+  <form id="bejelentkezés">
+    <label for="felhasznalo">
+      Felhasználónév: 
+    </label>
+    <br><br>
+
+    <input id="felhasznalo" type="text"
+           placeholder="Bármilyen nevet megadhatsz"
+           required>
+
+    <br><br>
+
+    <label for="jelszo">
+      Jelszó: 
+    </label>
+    <br><br>
+
+    <input id="jelszo" type="text"
+           placeholder="Bármilyen szöveget megadhatsz"
+           required>
+
+    <br><br>
+
+    <button type="submit">Tovább</button>
+  </form>
+
+  <p id="uzenet"></p>
+
+  <script>
+  document.getElementById("bejelentkezés")
+    .addEventListener("submit", function(event) {
+      event.preventDefault();
+      window.location.href = "vege.html";
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Üdvözöllek!</title>
+</head>
+<body style="font-family: Arial; max-width: 500px;
+             margin: 60px auto; padding: 20px;">
+
+  <h1>Üdvözöllek!</h1>
+
+  <p>A továbblépés előtt fogadd el a weboldal feltételeit.</p>
+
+  <p>
+    <a href="feltetelek.html">
+      A weboldal feltételeinek elolvasása
+    </a>
+  </p>
+
+  <label>
+    <input type="checkbox" id="elfogad">
+    Elfogadom a weboldal feltételeit.
+  </label>
+
+  <br><br>
+
+  <button id="tovabb" disabled
+          onclick="location.href='urlap.html'">
+    Tovább
+  </button>
+
+  <script>
+    const checkbox = document.getElementById("elfogad");
+    const button = document.getElementById("tovabb");
+
+    checkbox.addEventListener("change", () => {
+      button.disabled = !checkbox.checked;
+    });
+  </script>
+
+</body>
+</html>
